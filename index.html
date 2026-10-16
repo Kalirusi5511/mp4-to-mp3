@@ -9,8 +9,7 @@
         body {
             background: #121826;
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-            min-height: 100vh;
-            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh; display: flex; justify-content: center; align-items: center;
             padding: 16px;
         }
         .card {
@@ -20,20 +19,14 @@
             color: #eef2ff; border: 1px solid #2f3b5c;
         }
         h1 { font-size: 2rem; font-weight: 600; display: flex; align-items: center; gap: 12px; margin-bottom: 8px; color: #fff; }
-        h1 span {
-            background: linear-gradient(135deg, #8b5cf6, #3b82f6);
-            font-size: 1.6rem; padding: 8px 12px; border-radius: 50px;
-        }
+        h1 span { background: linear-gradient(135deg, #8b5cf6, #3b82f6); font-size: 1.6rem; padding: 8px 12px; border-radius: 50px; }
         .subhead { color: #9aa4c9; margin-bottom: 28px; border-left: 4px solid #3b82f6; padding-left: 16px; line-height: 1.4; }
         .upload-area {
             background: #0f1422; border: 2px dashed #2f3b5c; border-radius: 24px;
             padding: 36px 20px; text-align: center; cursor: pointer;
             transition: 0.2s; margin-bottom: 24px; position: relative;
         }
-        .upload-area:hover, .upload-area.drag-over {
-            border-color: #3b82f6; background: #131b2c;
-            box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
-        }
+        .upload-area:hover, .upload-area.drag-over { border-color: #3b82f6; background: #131b2c; box-shadow: 0 0 0 3px rgba(59,130,246,0.2); }
         .upload-area input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
         .upload-icon { font-size: 3.5rem; margin-bottom: 12px; }
         .upload-text { font-weight: 500; font-size: 1.2rem; color: #b9c2e0; margin-bottom: 6px; }
@@ -45,29 +38,18 @@
         }
         .file-info .name { font-weight: 500; color: #d6e0ff; }
         .file-info .size { color: #8293b9; font-size: 0.9rem; white-space: nowrap; margin-left: 16px; }
-        .progress-container {
-            background: #0b0f1a; height: 10px; border-radius: 20px;
-            overflow: hidden; margin: 18px 0 8px; border: 1px solid #202a40;
-        }
-        .progress-bar {
-            height: 100%; width: 0%;
-            background: linear-gradient(90deg, #8b5cf6, #3b82f6, #06b6d4);
-            border-radius: 20px; transition: width 0.2s ease;
-        }
+        .progress-container { background: #0b0f1a; height: 10px; border-radius: 20px; overflow: hidden; margin: 18px 0 8px; border: 1px solid #202a40; }
+        .progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg, #8b5cf6, #3b82f6, #06b6d4); border-radius: 20px; transition: width 0.2s ease; }
         .status-text { font-size: 0.9rem; color: #a1b0d9; display: flex; justify-content: space-between; margin-top: 6px; }
         .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
         button {
-            background: #2a3450; border: none; border-radius: 60px;
-            padding: 14px 24px; font-weight: 600; font-size: 1rem;
-            color: #eef2ff; display: inline-flex; align-items: center;
-            justify-content: center; gap: 10px; cursor: pointer;
-            transition: 0.15s; flex: 1 0 auto;
-            border: 1px solid #3e4b6e; box-shadow: 0 6px 0 #0b0f1a;
+            background: #2a3450; border: none; border-radius: 60px; padding: 14px 24px;
+            font-weight: 600; font-size: 1rem; color: #eef2ff;
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            cursor: pointer; transition: 0.15s; flex: 1 0 auto;
+            border: 1px solid #3e4b6e; box-shadow: 0 6px 0 #0b0f1a; font-family: inherit;
         }
-        button.primary {
-            background: linear-gradient(145deg, #4f46e5, #3b82f6);
-            border-color: #6d8aff; box-shadow: 0 6px 0 #1a2340;
-        }
+        button.primary { background: linear-gradient(145deg, #4f46e5, #3b82f6); border-color: #6d8aff; box-shadow: 0 6px 0 #1a2340; }
         button.primary:not(:disabled):hover { background: linear-gradient(145deg, #6366f1, #4f8eff); transform: translateY(-2px); }
         button:disabled { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: 0 4px 0 #0b0f1a; }
         button:active:not(:disabled) { transform: translateY(4px); box-shadow: 0 2px 0 #0b0f1a; }
@@ -76,7 +58,22 @@
         .badge { background: #2a3450; padding: 6px 12px; border-radius: 60px; font-size: 0.8rem; color: #b9c2e0; display: inline-block; }
         .footnote { margin-top: 24px; font-size: 0.78rem; color: #5b6a8c; text-align: center; border-top: 1px solid #1e263b; padding-top: 18px; }
         .error-msg { color: #fca5a5; background: #2a1a2a; border-radius: 40px; padding: 8px 16px; font-size: 0.9rem; margin-top: 12px; border: 1px solid #b91c1c; }
+        .success-msg { color: #86efac; background: #142a1a; border-radius: 40px; padding: 8px 16px; font-size: 0.9rem; margin-top: 12px; border: 1px solid #059669; }
         .hidden { display: none; }
+
+        /* === Debug-Konsole unten === */
+        .debug-panel {
+            margin-top: 18px; background: #000; border-radius: 12px;
+            border: 1px solid #2a3450; padding: 10px 14px;
+            font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+            font-size: 0.75rem; color: #86efac; max-height: 160px;
+            overflow-y: auto; line-height: 1.5;
+        }
+        .debug-panel .warn { color: #fbbf24; }
+        .debug-panel .err  { color: #fca5a5; }
+        .debug-panel .info { color: #7dd3fc; }
+        .debug-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; color: #6b7a9f; font-size: 0.7rem; }
+        .debug-clear { cursor: pointer; color: #f87171; }
     </style>
 </head>
 <body>
@@ -107,19 +104,69 @@
         </div>
 
         <div id="errorMsg" class="error-msg hidden"></div>
+        <div id="successMsg" class="success-msg hidden"></div>
 
         <div class="actions">
             <button id="convertBtn" class="primary" disabled>⚡ Konvertieren zu MP3</button>
             <button id="downloadBtn" class="download-btn" disabled>⬇️ MP3 herunterladen</button>
         </div>
+
         <div class="footnote"><span class="badge">🔒 Daten verlassen dein Gerät nicht</span></div>
+
+        <!-- Debug Panel -->
+        <div class="debug-panel" id="debugPanel">
+            <div class="debug-header">
+                <span>🐞 Debug-Konsole</span>
+                <span class="debug-clear" id="debugClear">[clear]</span>
+            </div>
+            <div id="debugLog"></div>
+        </div>
     </div>
 
-    <!-- ===== HIER wird die lokale lame.min.js eingebunden ===== -->
+    <!-- Lokale lame.min.js muss im selben Ordner liegen! -->
     <script src="lame.min.js"></script>
     <script>
     (function(){
-        // ---------- DOM ----------
+        'use strict';
+
+        // ================================================================
+        // 🐞 Debug-Logger
+        // ================================================================
+        const debugLog  = document.getElementById('debugLog');
+        const debugPanel= document.getElementById('debugPanel');
+
+        function log(type, ...args) {
+            const time = new Date().toLocaleTimeString();
+            const msg  = args.map(a => {
+                if (typeof a === 'object') {
+                    try { return JSON.stringify(a); } catch(e){ return String(a); }
+                }
+                return String(a);
+            }).join(' ');
+            const line = document.createElement('div');
+            line.className = type;
+            line.textContent = `[${time}] ${msg}`;
+            debugLog.appendChild(line);
+            debugLog.scrollTop = debugLog.scrollHeight;
+
+            // Auch in echte Browser-Konsole
+            const method = type === 'err' ? 'error' : type === 'warn' ? 'warn' : 'log';
+            console[method]('[MP4→MP3]', ...args);
+
+            // Max 200 Zeilen
+            while (debugLog.children.length > 200) debugLog.removeChild(debugLog.firstChild);
+        }
+        const info  = (...a) => log('info', ...a);
+        const warn  = (...a) => log('warn', ...a);
+        const error = (...a) => log('err',  ...a);
+
+        document.getElementById('debugClear').addEventListener('click', () => {
+            debugLog.innerHTML = '';
+        });
+
+        // ================================================================
+        // 🧩 DOM-Elemente
+        // ================================================================
         const uploadArea     = document.getElementById('uploadArea');
         const fileInput      = document.getElementById('fileInput');
         const fileInfoDiv    = document.getElementById('fileInfo');
@@ -132,14 +179,21 @@
         const convertBtn     = document.getElementById('convertBtn');
         const downloadBtn    = document.getElementById('downloadBtn');
         const errorMsgDiv    = document.getElementById('errorMsg');
+        const successMsgDiv  = document.getElementById('successMsg');
 
-        // ---------- State ----------
+        // ================================================================
+        // 🗃️ State
+        // ================================================================
         let currentFile  = null;
         let mp3Blob      = null;
         let mp3FileName  = 'audio.mp3';
         let isConverting = false;
 
-        // ---------- Helfer ----------
+        info('Seite geladen. lamejs verfügbar:', typeof lamejs !== 'undefined' && !!lamejs.Mp3Encoder);
+
+        // ================================================================
+        // 🛠️ Helfer
+        // ================================================================
         function formatBytes(bytes) {
             if (!bytes) return '0 Bytes';
             const k = 1024, sizes = ['Bytes','KB','MB','GB'];
@@ -149,10 +203,23 @@
         function showError(msg) {
             errorMsgDiv.textContent = msg;
             errorMsgDiv.classList.remove('hidden');
-            clearTimeout(errorMsgDiv._timer);
-            errorMsgDiv._timer = setTimeout(() => errorMsgDiv.classList.add('hidden'), 7000);
+            successMsgDiv.classList.add('hidden');
+            clearTimeout(errorMsgDiv._t);
+            errorMsgDiv._t = setTimeout(() => errorMsgDiv.classList.add('hidden'), 8000);
+            error('FEHLER:', msg);
         }
-        function clearError() { errorMsgDiv.textContent = ''; errorMsgDiv.classList.add('hidden'); }
+        function showSuccess(msg) {
+            successMsgDiv.textContent = msg;
+            successMsgDiv.classList.remove('hidden');
+            errorMsgDiv.classList.add('hidden');
+            clearTimeout(successMsgDiv._t);
+            successMsgDiv._t = setTimeout(() => successMsgDiv.classList.add('hidden'), 5000);
+            info('ERFOLG:', msg);
+        }
+        function clearMessages() {
+            errorMsgDiv.classList.add('hidden');
+            successMsgDiv.classList.add('hidden');
+        }
         function setProgress(pct, text) {
             pct = Math.min(100, Math.max(0, pct));
             progressBar.style.width = pct + '%';
@@ -160,74 +227,94 @@
             if (text !== undefined) statusLabel.textContent = text;
         }
 
-        // ---------- Datei Handling ----------
+        // ================================================================
+        // 📁 Datei Handling
+        // ================================================================
         function handleFile(file) {
+            info('Datei ausgewählt:', file.name, formatBytes(file.size), file.type || '(kein Typ)');
+
             const isMp4 = file.type === 'video/mp4'
                        || file.type === 'audio/mp4'
                        || file.name.toLowerCase().endsWith('.mp4');
-            if (!isMp4) { showError('Bitte wähle eine MP4‑Datei aus.'); return; }
+            if (!isMp4) {
+                showError('Bitte wähle eine MP4‑Datei aus.');
+                return;
+            }
             if (file.size > 1024*1024*1024) {
-                showError(`Die Datei ist größer als 1 GB (${formatBytes(file.size)}).`);
+                warn('Datei ist größer als 1 GB:', formatBytes(file.size));
             }
 
             currentFile = file;
+            mp3Blob = null;
             fileNameSpan.textContent = file.name;
             fileSizeSpan.textContent = formatBytes(file.size);
             fileInfoDiv.classList.remove('hidden');
 
-            mp3Blob = null;
             downloadBtn.disabled = true;
             convertBtn.disabled = false;
             progressSection.classList.remove('hidden');
             setProgress(0, 'Bereit zur Konvertierung');
-            clearError();
+            clearMessages();
+
+            info('Datei bereit. Konvertieren-Button aktiviert.');
         }
 
-        // ---------- Konvertierung ----------
+        // ================================================================
+        // 🎼 Konvertierung
+        // ================================================================
         async function convertToMp3() {
             if (!currentFile) { showError('Keine Datei ausgewählt.'); return; }
-            if (isConverting) return;
+            if (isConverting) { warn('Konvertierung läuft bereits.'); return; }
 
-            // Prüfen ob lamejs geladen ist
             if (typeof lamejs === 'undefined' || !lamejs.Mp3Encoder) {
-                showError('MP3-Encoder (lamejs) wurde nicht geladen. Stelle sicher, dass lame.min.js im selben Ordner liegt.');
+                showError('MP3-Encoder (lamejs) nicht geladen. lame.min.js muss im selben Ordner liegen.');
                 return;
             }
 
             isConverting = true;
             convertBtn.disabled = true;
             downloadBtn.disabled = true;
-            clearError();
+            clearMessages();
             setProgress(5, 'Lese Datei …');
+            info('Starte Konvertierung:', currentFile.name);
 
             try {
-                // 1) Datei als ArrayBuffer lesen
+                // 1) Datei lesen
+                info('Lese Datei als ArrayBuffer …');
                 const arrayBuffer = await new Promise((resolve, reject) => {
                     const reader = new FileReader();
                     reader.onload = e => resolve(e.target.result);
-                    reader.onerror = () => reject(new Error('Datei konnte nicht gelesen werden.'));
+                    reader.onerror = () => reject(new Error('FileReader-Fehler'));
                     reader.readAsArrayBuffer(currentFile);
                 });
+                info('Datei gelesen. Größe:', formatBytes(arrayBuffer.byteLength));
 
+                // 2) Dekodieren
                 setProgress(15, 'Dekodiere Audio …');
-
-                // 2) Audio dekodieren
+                info('Dekodiere Audio via Web Audio API …');
                 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
                 let audioBuffer;
                 try {
                     audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
                 } catch (err) {
-                    throw new Error('Konnte Audio nicht dekodieren. Unterstützt dein Browser das Format?');
+                    error('decodeAudioData Fehler:', err);
+                    throw new Error('Audio konnte nicht dekodiert werden. Unterstützt dein Browser dieses MP4-Format?');
                 } finally {
                     if (audioCtx.state !== 'closed') await audioCtx.close();
                 }
+                info('Audio dekodiert:',
+                     'Dauer=' + audioBuffer.duration.toFixed(2) + 's,',
+                     'SampleRate=' + audioBuffer.sampleRate,
+                     'Channels=' + audioBuffer.numberOfChannels,
+                     'Samples=' + audioBuffer.length);
+
                 if (!audioBuffer || audioBuffer.length === 0) {
-                    throw new Error('Audiodaten konnten nicht extrahiert werden.');
+                    throw new Error('Audiodaten leer.');
                 }
 
+                // 3) PCM vorbereiten
                 setProgress(40, 'Konvertiere zu MP3 …');
-
-                // 3) PCM-Daten vorbereiten
+                info('Konvertiere zu Int16-PCM …');
                 const numChannels = audioBuffer.numberOfChannels;
                 const sampleRate  = audioBuffer.sampleRate;
                 const length      = audioBuffer.length;
@@ -242,13 +329,16 @@
                     left[i]  = l < 0 ? l * 0x8000 : l * 0x7FFF;
                     right[i] = r < 0 ? r * 0x8000 : r * 0x7FFF;
                 }
+                info('PCM bereit. Länge:', length, 'Samples');
 
-                // 4) MP3 encodieren
-                const bitRate = 128;
-                const encoder = new lamejs.Mp3Encoder(2, sampleRate, bitRate);
+                // 4) MP3 Encoder
+                info('Initialisiere lamejs Mp3Encoder …');
+                const encoder = new lamejs.Mp3Encoder(2, sampleRate, 128);
                 const blockSize = 1152;
                 const chunks = [];
                 let processed = 0;
+                const totalBlocks = Math.ceil(length / blockSize);
+                let lastLoggedBlock = -1;
 
                 for (let i = 0; i < length; i += blockSize) {
                     const leftChunk  = left.subarray(i, i + blockSize);
@@ -256,13 +346,20 @@
                     const buf = encoder.encodeBuffer(leftChunk, rightChunk);
                     if (buf.length > 0) chunks.push(new Uint8Array(buf));
                     processed += leftChunk.length;
+
+                    const blockIdx = Math.floor(i / blockSize);
+                    if (blockIdx % 500 === 0 && blockIdx !== lastLoggedBlock) {
+                        lastLoggedBlock = blockIdx;
+                        info(`Encoding: Block ${blockIdx}/${totalBlocks} (${Math.round(processed/length*100)}%)`);
+                    }
                     setProgress(40 + (processed / length) * 55, 'Konvertiere zu MP3 …');
                 }
                 const final = encoder.flush();
                 if (final.length > 0) chunks.push(new Uint8Array(final));
+                info('Encoding fertig. Chunks:', chunks.length);
 
                 if (chunks.length === 0) {
-                    throw new Error('MP3-Encoding fehlgeschlagen (keine Daten).');
+                    throw new Error('MP3-Encoding lieferte keine Daten.');
                 }
 
                 // 5) Blob erzeugen
@@ -270,8 +367,16 @@
                 const baseName = currentFile.name.replace(/\.mp4$/i, '') || 'audio';
                 mp3FileName = baseName + '.mp3';
 
+                info('MP3-Blob erstellt:', mp3FileName, formatBytes(mp3Blob.size), 'Typ:', mp3Blob.type);
+
                 setProgress(100, 'Konvertierung abgeschlossen');
                 downloadBtn.disabled = false;
+                showSuccess(`✅ Konvertierung fertig! MP3-Größe: ${formatBytes(mp3Blob.size)}`);
+
+                // Blob im window für manuellen Zugriff ablegen
+                window.__mp3Blob = mp3Blob;
+                window.__mp3FileName = mp3FileName;
+                info('Tipp: In der Konsole `downloadMp3()` eingeben, um Download manuell auszulösen.');
             } catch (err) {
                 console.error(err);
                 showError(err.message || 'Unbekannter Fehler bei der Konvertierung.');
@@ -283,20 +388,49 @@
             }
         }
 
-        // ---------- Download ----------
+        // ================================================================
+        // 💾 Download
+        // ================================================================
         function downloadMp3() {
-            if (!mp3Blob) { showError('Keine MP3-Datei vorhanden.'); return; }
-            const url = URL.createObjectURL(mp3Blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = mp3FileName;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            setTimeout(() => URL.revokeObjectURL(url), 1500);
+            info('Download angefordert …');
+            if (!mp3Blob) {
+                error('mp3Blob ist null – nichts zum Herunterladen.');
+                showError('Keine MP3-Datei vorhanden. Bitte zuerst konvertieren.');
+                return;
+            }
+            info('Blob-Größe:', formatBytes(mp3Blob.size), 'Typ:', mp3Blob.type);
+
+            try {
+                const url = URL.createObjectURL(mp3Blob);
+                info('Object-URL erstellt:', url.substring(0, 60) + '…');
+
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = mp3FileName;
+                a.style.display = 'none';
+                document.body.appendChild(a);
+
+                // Klick simulieren
+                a.click();
+                info('Klick auf Download-Link ausgelöst.');
+
+                // Aufräumen
+                setTimeout(() => {
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                    info('URL freigegeben.');
+                }, 2000);
+
+                showSuccess(`💾 Download gestartet: ${mp3FileName}`);
+            } catch (err) {
+                error('Download-Fehler:', err);
+                showError('Download fehlgeschlagen: ' + err.message);
+            }
         }
 
-        // ---------- Events ----------
+        // ================================================================
+        // 🎯 Events
+        // ================================================================
         fileInput.addEventListener('change', e => {
             const file = e.target.files[0];
             if (file) handleFile(file);
@@ -318,10 +452,36 @@
         convertBtn.addEventListener('click', convertToMp3);
         downloadBtn.addEventListener('click', downloadMp3);
 
-        // Initial
-        progressSection.classList.add('hidden');
-        fileInfoDiv.classList.add('hidden');
-        errorMsgDiv.classList.add('hidden');
+        // ================================================================
+        // 🌐 Globales Debug-Objekt (in Konsole nutzbar)
+        // ================================================================
+        window.debug = {
+            state: () => ({
+                currentFile: currentFile ? { name: currentFile.name, size: currentFile.size, type: currentFile.type } : null,
+                mp3Blob: mp3Blob ? { size: mp3Blob.size, type: mp3Blob.type } : null,
+                mp3FileName, isConverting,
+                lamejsLoaded: typeof lamejs !== 'undefined' && !!lamejs.Mp3Encoder
+            }),
+            download: downloadMp3,
+            convert: convertToMp3,
+            clearLog: () => { debugLog.innerHTML = ''; },
+            reset: () => {
+                currentFile = null; mp3Blob = null; isConverting = false;
+                window.__mp3Blob = null; window.__mp3FileName = null;
+                fileInfoDiv.classList.add('hidden');
+                progressSection.classList.add('hidden');
+                errorMsgDiv.classList.add('hidden');
+                successMsgDiv.classList.add('hidden');
+                convertBtn.disabled = true;
+                downloadBtn.disabled = true;
+                setProgress(0, 'Bereit');
+                info('Zurückgesetzt.');
+            },
+            version: '1.0.0'
+        };
+
+        info('Debug-Objekt verfügbar: window.debug');
+        info('Verfügbare Befehle: debug.state(), debug.download(), debug.convert(), debug.reset()');
     })();
     </script>
 </body>
